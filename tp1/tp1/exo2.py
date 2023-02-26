@@ -31,34 +31,34 @@ def bezier2( t, A, B, C ) :
 
 #===========================================
 
-for i in T :
-    F.append( bezier1( i, A, B) )
+# for i in T :
+#     F.append( bezier1( i, A, B) )
 
 
-for i in T :
-    F.append( bezier1( i, B, C) )
+# for i in T :
+#     F.append( bezier1( i, B, C) )
 
 
-D = interm( t, A, B )
-E = interm( t, B, C )
+# D = interm( t, A, B )
+# E = interm( t, B, C )
 
 # for i in T :
 #     Z.append( bezier1( i, E, D) )
 
 
-# for i in T :
-#     F.append( bezier2( i, A, B, C ) )
+for i in T :
+    F.append( bezier2( i, A, B, C ) )
 
 F = np.array(F)
-D = np.array(D)
-E = np.array(E)
+# D = np.array(D)
+# E = np.array(E)
 # Z = np.array(Z)
 
 plt.plot( A[0], A[1], "g*")
-plt.plot( E[0], E[1], "g*")
-plt.plot( D[0], D[1], "g*")
+# plt.plot( E[0], E[1], "g*")
+# plt.plot( D[0], D[1], "g*")
 plt.plot( B[0], B[1], "g*")
 plt.plot( C[0], C[1], "g*")
 plt.plot( F[:,0], F[:,1], "r.")
 # plt.plot( Z[:,0], Z[:,1], "r.")
-plt.show()
+""" plt.show() """
